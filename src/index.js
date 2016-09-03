@@ -187,6 +187,8 @@ PickerPanel.prototype = {
 
     if (names.length) {
       this.$toggleSpan.html(names.join(','));
+    } else {
+      this.$toggleSpan.html('请选择');
     }
   },
 
