@@ -20,7 +20,7 @@
     <%})%>
   </ul>
   <ul class="group-childs">
-    <li style="width:100%">请选择城市</li>
+    <li style="width:100%;color:#5b626f;">请选择城市</li>
     <ul class="js-render-childs childs"></ul>
   </ul>
   <div class="picked-footer">
