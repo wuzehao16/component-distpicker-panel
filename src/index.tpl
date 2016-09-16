@@ -1,6 +1,6 @@
 <div class="picker-panel">
   <div class="picked-result">
-    <div class="picked-title">已选择</div>
+    <div class="picked-title">已选择<span style="display:block;font-size:14px;font-weight:lighter;color: #9a9a9a;">( 可多选 )</span></div>
     <ul class="js-render-picked picked-items"></ul>
   </div>
   <ul class="group-parents">
