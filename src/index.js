@@ -126,6 +126,10 @@ PickerPanel.prototype = {
       this._removePickedItem('-1');
       this._unStylePickedItem('-1');
     }
+    if(this.pickedData.indexOf('1') >=0) {// 若已选中全国，去掉
+      this._removePickedItem('1');
+      this._unStylePickedItem('1');
+    }
     if(!this.multiProvince) { // 省份单选
       this.$menu.find('.provinces li').not($province).removeClass('picked');
       _.each(this.pickedData, function (pickedId) {
