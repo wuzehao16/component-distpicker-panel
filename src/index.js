@@ -231,6 +231,10 @@ PickerPanel.prototype = {
   },
 
   getPickedValue: function () {
+    var self = this
+    _.each(this.pickedData, function (id, index) {
+      if(id == '-1') self.pickedData[index] = 1
+    });
     return this.pickedData;
   },
 
