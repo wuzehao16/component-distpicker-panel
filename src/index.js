@@ -122,11 +122,11 @@ PickerPanel.prototype = {
   _onClickProvince: function (id, $province) {
     var self = this;
 
-    if(this.pickedData.indexOf('-1') >=0) {// 若已选中全国，去掉
+    if(_.indexOf(this.pickedData, '-1') >=0) {// 若已选中全国，去掉
       this._removePickedItem('-1');
       this._unStylePickedItem('-1');
     }
-    if(this.pickedData.indexOf('1') >=0) {// 若已选中全国，去掉
+    if(_.indexOf(this.pickedData, '1') >=0) {// 若已选中全国，去掉
       this._removePickedItem('1');
       this._unStylePickedItem('1');
     }
