@@ -54,7 +54,8 @@ function PickerPanel(options) {
 
   this.group = format.formatedGroup;
   this.dictionry = format.dictionry;
-  this.dictionry['-1'] = {name:'全国',id:'-1'};
+  this.dictionry['1'] = {name:'全国',id:'1'};
+  this.dictionry['-1'] = {name:'全国',id:'1'};
 
   this.$menu.on('click', _.bind(this._eventDispatcher, this));
 
@@ -213,7 +214,7 @@ PickerPanel.prototype = {
 
     if(!this.pickedData || !this.pickedData.length) {
       return [{
-        id: '-1',
+        id: '1',
         name: '全国'
       }];
     }
