@@ -4,7 +4,7 @@
     <ul class="js-render-picked picked-items"></ul>
   </div>
   <ul class="group-parents">
-    <li class="global" data-id="-1">全国</li>
+    <li class="global" data-id="1">全国</li>
     <%_.each(group.groupProvinceByLetter, function(letterGroup){%>
     <li class="group">
       <div class="level-1"><%=letterGroup.groupName%></div>
