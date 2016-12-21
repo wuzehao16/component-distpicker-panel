@@ -38,7 +38,10 @@ function PickerPanel(options) {
   Dropdown.call(this, options);
 
   this.source = this.source || {};
+  // 省份是否多选
   this.multiProvince = this.multiProvince === undefined ? false : this.multiProvince;
+  // 城市是否多选
+  this.multiCity = this.multiCity === undefined ? true : this.multiCity;
   this.pickedData = removeSpamValue(this.pickedData || []);
   this.onSelect = this.onSelect || $.noop;
 
@@ -156,6 +159,9 @@ PickerPanel.prototype = {
   },
 
   _onClickCity: function (id, $city) {
+    if (!this.multiCity) {
+      $city.siblings('.picked').removeClass('picked')
+    }
     $city.toggleClass('picked');
     this._togglePickedItem(id);
 
@@ -311,6 +317,7 @@ PickerPanel.prototype = {
   },
 
   _addPickedItem: function (id) {
+    if (!this.multiCity) return this.pickedData = [id]
     this.pickedData.push(id);
   },
 
